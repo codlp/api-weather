@@ -1,12 +1,8 @@
-class Api::V1::LocationsController < ApplicationController
+class Api::V1::LocationsController < ApiController
     before_action :set_location
 
     # What we request for a specific location temperature
     def show
-        render json: {
-            id: @location.id,
-            name: @location.name
-        }
     end
 
     private
